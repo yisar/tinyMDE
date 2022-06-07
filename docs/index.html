@@ -7,30 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinyMDE demo</title>
     <script src="./tinymde.js"></script>
+    <style>
+        @import url("//at.alicdn.com/t/font_1151392_5hwi3w2ygqu.css");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f2f2f2;
+        }
+
+        h1{
+            text-align: center;
+            padding: 30px;
+        }
+
+        .tinymde{
+            width: 800px;
+            min-height: 200px;
+            margin: 30px auto;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            padding: 10px 15px;
+            resize: none;
+            border-radius: 0 0 10px 10px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        section {
+            padding: 10px;
+            background: #fff;
+            border-bottom: 2px solid #f2f2f2;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .te{
+            cursor: pointer;
+            margin: 7px;
+            padding: 7px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .te:hover{
+            background: #f2f2f2;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="actions">
-        <button onclick="md.bold()">mde.bold()</button>
-        <button onclick="md.italic()">mde.italic()</button>
-        <button onclick="md.inlineCode()">mde.inlineCode()</button>
-        <button onclick="md.strikethrough()">mde.strikethrough</button>
-        <button onclick="md.quote()">md.quote()</button>
-        <button onclick="md.ol()">md.ol()</button>
-        <button onclick="md.ul()">md.ul()</button>
-        <button onclick="md.task()">md.task()</button>
-        <button onclick="md.link()">md.link()</button>
-        <button onclick="md.image()">md.image()</button>
-        <button onclick="md.heading(1)">md.heading(1)</button>
-        <button onclick="md.blockCode()">md.blockCode()</button>
-        <button onclick="md.undo()">md.undo()</button>
-        <button onclick="md.redo()">md.redo()</button>
-        <button onclick="md.hr()">md.hr()</button>
+    <div class="tinymde">
+        <h1>TinyMDE Demo</h1>
+        <section>
+            <i class="te te-bold" onclick="md.bold()"></i>
+            <i class="te te-italic" onclick="md.italic()"></i>
+            <i class="te te-quote" onclick="md.quote()"></i>
+
+            <i class="te te-image" onclick="md.image()"></i>
+            <i class="te te-link" onclick="md.link()"></i>
+            <i class="te te-code" onclick="md.blockCode()"></i>
+        </section>
+        <textarea spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at nibh felis. Nunc consequat diam et tellus tempor gravida. Donec hendrerit aliquet risus, ut tempor purus dictum sit amet. Integer sit amet lacus eget ipsum pulvinar interdum.
+      
+      Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. Vestibulum ornare ut eros vitae adipiscing.
+    </textarea>
     </div>
-    <textarea
-        spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at nibh felis. Nunc consequat diam et tellus tempor gravida. Donec hendrerit aliquet risus, ut tempor purus dictum sit amet. Integer sit amet lacus eget ipsum pulvinar interdum.
-  
-  Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. Vestibulum ornare ut eros vitae adipiscing.</textarea>
     <script>
         var md = new TinyMDE(document.querySelector('textarea'))
     </script>
