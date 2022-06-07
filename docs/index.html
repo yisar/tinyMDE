@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyMDE demo</title>
+    <script src="./tinymde.js"></script>
+</head>
+
+<body>
+    <div id="actions">
+        <button onclick="md.bold()">mde.bold()</button>
+        <button onclick="md.italic()">mde.italic()</button>
+        <button onclick="md.inlineCode()">mde.inlineCode()</button>
+        <button onclick="md.strikethrough()">mde.strikethrough</button>
+        <button onclick="md.quote()">md.quote()</button>
+        <button onclick="md.ol()">md.ol()</button>
+        <button onclick="md.ul()">md.ul()</button>
+        <button onclick="md.task()">md.task()</button>
+        <button onclick="md.link()">md.link()</button>
+        <button onclick="md.image()">md.image()</button>
+        <button onclick="md.heading(1)">md.heading(1)</button>
+        <button onclick="md.blockCode()">md.blockCode()</button>
+        <button onclick="md.undo()">md.undo()</button>
+        <button onclick="md.redo()">md.redo()</button>
+        <button onclick="md.hr()">md.hr()</button>
+    </div>
+    <textarea
+        spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at nibh felis. Nunc consequat diam et tellus tempor gravida. Donec hendrerit aliquet risus, ut tempor purus dictum sit amet. Integer sit amet lacus eget ipsum pulvinar interdum.
+  
+  Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. Vestibulum ornare ut eros vitae adipiscing.</textarea>
+    <script>
+        var md = new TinyMDE(document.querySelector('textarea'))
+    </script>
+</body>
+
+</html>
